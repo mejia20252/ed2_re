@@ -46,7 +46,7 @@ const Sidebar: React.FC = () => {
         ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:relative md:w-64`}
       >
         <div className="flex items-center justify-between p-6">
-          <h1 className="text-xl font-extrabold text-gray-800">Smart Condominium</h1>
+          <h1 className="text-xl font-extrabold text-gray-800">.</h1>
           <button
             onClick={() => setIsOpen(false)}
             className="p-2 text-gray-600 transition-colors duration-300 rounded-full hover:bg-gray-100 md:hidden focus:outline-none"
