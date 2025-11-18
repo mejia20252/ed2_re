@@ -48,42 +48,56 @@ export const menuItemsByRole: Record<string, MenuItem[]> = {
         { to: '/administrador/grupos', title: 'Gestión de Grupos', icon: faLayerGroup },
         { to: '/administrador/aulas', title: 'Gestión de Aulas', icon: faDoorOpen },
         { to: '/administrador/gestiones', title: 'Períodos Académicos', icon: faCalendarAlt },
-        { to: '/administrador/docentes', title: 'Gestion Docentes', icon: faUserGraduate },
+      ],
+    },
+    {
+      title: 'Módulo Docentes',
+      icon: faSchool,
+      subItems: [
         { to: '/administrador/reportes', title: 'Reporte Carga Horaria', icon: faClock },
+        { to: '/administrador/docentes', title: 'Gestion Docentes', icon: faUserGraduate },
+        { to: '/administrador/comunicados', title: 'Gestion Comunicados', icon: faUserGraduate },
+        { to: '/administrador/licencias', title: 'Gestion Licencias', icon: faUserGraduate },
+        { to: '/administrador/asistencias', title: 'Gestion Asistencias', icon: faUserGraduate },
+
 
       ],
     },
   ],
-
-  Docente: [
+ Docente: [
     { 
-      to: '/docente/dashboard', 
+      to: '/administrador/dashboard', 
       title: 'DASHBOARD', 
       icon: faHome 
     },
-    
     {
-      title: 'Seguridad',
-      icon: faUser,
+      title: 'Módulo Seguridad',
+      icon: faShieldAlt,
       subItems: [
-        { to: '/docente/perfil', title: 'Datos Personales', icon: faUser },
-        { to: '/docente/cambiar-contra', title: 'Cambiar Contraseña', icon: faGear },
         { title: 'Cerrar Sesión', icon: faSignOutAlt, action: 'signout' },
       ],
     },
-    
+
     {
-      title: 'Mi Carga Horaria',
-      icon: faClock,
+      title: 'Módulo Gestión Académica',
+      icon: faSchool,
       subItems: [
-        { to: '/docente/mi-horario', title: 'Ver Mi Horario', icon: faCalendar },
-        { to: '/docente/mis-materias', title: 'Mis Materias Asignadas', icon: faBook },
-        { to: '/docente/mis-grupos', title: 'Mis Grupos', icon: faLayerGroup },
-        { to: '/docente/mis-aulas', title: 'Aulas Asignadas', icon: faDoorOpen },
-        { to: '/docente/carga-semanal', title: 'Carga Horaria Semanal', icon: faCalendarAlt },
+        { to: '/docente/grupos', title: 'Gestión de Grupos', icon: faLayerGroup },
+        { to: '/docente/aulas', title: 'Gestión de Aulas', icon: faDoorOpen },
+      ],
+    },
+    {
+      title: 'Módulo Docentes',
+      icon: faSchool,
+      subItems: [
+        { to: '/docente/reportes', title: 'Reporte Carga Horaria', icon: faClock },
+        { to: '/docente/comunicados', title: 'Gestion Comunicados', icon: faUserGraduate },
+        { to: '/docente/licencias', title: 'Gestion Licencias', icon: faUserGraduate },
+
       ],
     },
   ],
+
 
   Coordinador: [
     { 
@@ -97,7 +111,7 @@ export const menuItemsByRole: Record<string, MenuItem[]> = {
       icon: faUser,
       subItems: [
         { to: '/coordinador/perfil', title: 'Datos Personales', icon: faUser },
-        { to: '/coordinador/cambiar-contra', title: 'Cambiar Contraseña', icon: faGear },
+        { to: '/coordingrador/cambiar-contra', title: 'Cambiar Contraseña', icon: faGear },
         { title: 'Cerrar Sesión', icon: faSignOutAlt, action: 'signout' },
       ],
     },

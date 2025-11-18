@@ -8,7 +8,7 @@ import Perfil from './pages/Perfil';
 import { useAuth } from './contexts/AuthContext';
 import AdministradorRoutes from './routes/AdministradorRoutes';
 import DocenteRoutes from './routes/DocenteRoutes';
-
+import CoordinadorRoutes from './routes/CoordinadorRoutes';
 import Sidebar from './components/Layout/Sidebar';
 import Welcome from './pages/welcom';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -55,9 +55,19 @@ function App() {
               </ProtectedRoute>
             }
           />
-
         </Route>
-   
+         <Route element={<ProtectedRoute><LayoutWithSidebar /></ProtectedRoute>}>
+          <Route
+            path="/coordinador/*"
+            element={
+              <ProtectedRoute requiredRoles={['Coordinador']}>
+                <CoordinadorRoutes />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
+
+        
        {/** <Route path="/forbidden" element={<Forbidden />} />{/**
        {/** <Route path="*" element={<NotFound />} />**/}
         <Route

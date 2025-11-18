@@ -1,46 +1,42 @@
 // src/routes/AdminRoutes.tsx
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+
 import ProtectedRoute from '../components/ProtectedRoute';
-import AulaForm from '../pages/Administrador/Aula/AulaForm.tsx';
-import AulaList from '../pages/Administrador/Aula/AulaList.tsx';
-import MateriaForm from '../pages/Administrador/Materia/MateriaForm.tsx';
-import MateriaList from '../pages/Administrador/Materia/MateriaList.tsx';
-import RolList from '../pages/Administrador/Rol/RolList.tsx';
-import RolForm from '../pages/Administrador/Rol/RolForm.tsx';
-import UserForm from '../pages/Administrador/User/UserForm.tsx';
-import UserList from '../pages/Administrador/User/UserList.tsx';
 
-import GestionForm from '../pages/Administrador/Gestion/GestionForm';
+import AulaForm from '../pages/Coordinador/Aula/AulaForm.tsx';
+import AulaList from '../pages/Coordinador/Aula/AulaList.tsx';
+import MateriaForm from '../pages/Coordinador/Materia/MateriaForm.tsx';
+import MateriaList from '../pages/Coordinador/Materia/MateriaList.tsx';
 
-import GestionList from '../pages/Administrador/Gestion/GestionList.tsx';
+import UserForm from '../pages/Coordinador/User/UserForm.tsx';
+import UserList from '../pages/Coordinador/User/UserList.tsx';
 
-import DocenteForm from '../pages/Administrador/Docente/DocenteForm.tsx';
-import DocenteList from '../pages/Administrador/Docente/DocenteList.tsx';
-import LicenciaForm from '../pages/Administrador/Licencia/LicenciaForm.tsx';
+import GestionForm from '../pages/Coordinador/Gestion/GestionForm';
 
-import LicenciaList from '../pages/Administrador/Licencia/LicenciaList.tsx';
+import GestionList from '../pages/Coordinador/Gestion/GestionList.tsx';
 
+import DocenteForm from '../pages/Coordinador/Docente/DocenteForm.tsx';
+import DocenteList from '../pages/Coordinador/Docente/DocenteList.tsx';
 
-import GrupoList from '../pages/Administrador/Grupo/GrupoList.tsx';
-import GrupoForm from '../pages/Administrador/Grupo/GrupoForm.tsx';
+import LicenciaForm from '../pages/Coordinador/Licencia/LicenciaForm.tsx';
+import LicenciaList from '../pages/Coordinador/Licencia/LicenciaList.tsx';
 
-import ComunicadoList from '../pages/Administrador/Comunicado/ComunicadoList.tsx';
+import ComunicadoList from '../pages/Coordinador/Comunicado/ComunicadoList.tsx';
 
-import ComunicadoForm from '../pages/Administrador/Comunicado/ComunicadoForm.tsx';
+import ComunicadoForm from '../pages/Coordinador/Comunicado/ComunicadoForm.tsx';
 
 
 
-import CargaHorariaForm from '../pages/Administrador/CargaHoraria/CargaHorariaForm.tsx';
-import CargaHorariaList from '../pages/Administrador/CargaHoraria/CargaHorariaList.tsx';
-import Reportes from '../pages/Administrador/Reporte/Reportes.tsx';
+import CargaHorariaForm from '../pages/Coordinador/CargaHoraria/CargaHorariaForm.tsx';
+import CargaHorariaList from '../pages/Coordinador/CargaHoraria/CargaHorariaList.tsx';
+import Reportes from '../pages/Coordinador/Reporte/Reportes.tsx';
 
-import AsistenciasDocente from '../pages/Administrador/Asistencia/AsistenciasDocente.tsx';
 
 import ChangePassword from '../pages/CambiarContras';
 import Perfil from '../pages/Perfil.tsx';
-const AdminRoutes: React.FC = () => (
-    <ProtectedRoute requiredRoles={["Administrador"]}>
+const CoordinadorRoutes: React.FC = () => (
+    <ProtectedRoute requiredRoles={["Coordinador"]}>
         <Routes>
 
             <Route index element={<Navigate to="dashboard" replace />} />
@@ -60,9 +56,6 @@ const AdminRoutes: React.FC = () => (
             <Route path='/materias/new' element={<MateriaForm />} />
             <Route path='/materias/:id/editar' element={<MateriaForm />} />
 
-            <Route path='/roles' element={<RolList />} />
-            <Route path='/roles/new' element={<RolForm />} />
-            <Route path='/roles/:id/edit' element={<RolForm />} />
 
             <Route path='/usuarios' element={<UserList />} />
             <Route path='/usuarios/new' element={<UserForm />} />
@@ -81,11 +74,7 @@ const AdminRoutes: React.FC = () => (
             <Route path='/carga_horarias/new' element={<CargaHorariaForm />} />
             <Route path='/carga_horarias/:id/edit' element={<CargaHorariaForm />} />
 
-            <Route path='/grupos' element={<GrupoList />} />
-            <Route path='/grupos/new' element={<GrupoForm />} />
-            <Route path='/grupos/:id/edit' element={<GrupoForm />} />
-
-
+            
             <Route path='/comunicados' element={<ComunicadoList />} />
             <Route path='/comunicados/new' element={<ComunicadoForm />} />
             <Route path='/comunicados/:id/edit' element={<ComunicadoForm />} />
@@ -94,11 +83,8 @@ const AdminRoutes: React.FC = () => (
             <Route path='/licencias/new' element={<LicenciaForm />} />
             <Route path='/licencias/:id/edit' element={<LicenciaForm />} />
 
-            <Route path='/asistencias' element={<AsistenciasDocente />} />
-
 
         </Routes>
     </ProtectedRoute>
 );
-
-export default AdminRoutes;
+export default CoordinadorRoutes;
