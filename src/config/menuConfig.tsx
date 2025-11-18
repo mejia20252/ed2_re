@@ -93,6 +93,7 @@ export const menuItemsByRole: Record<string, MenuItem[]> = {
         { to: '/docente/reportes', title: 'Reporte Carga Horaria', icon: faClock },
         { to: '/docente/comunicados', title: 'Gestion Comunicados', icon: faUserGraduate },
         { to: '/docente/licencias', title: 'Gestion Licencias', icon: faUserGraduate },
+        { to: '/docente/mi-horario', title: 'MI horario', icon: faUserGraduate },
 
       ],
     },
